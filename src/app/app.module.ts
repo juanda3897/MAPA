@@ -1,18 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
+import { AgmCoreModule } from '@agm/core';
 import { AppComponent } from './app.component';
+import{FormsModule} from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAnJ0gZ5aho5sCY9ayGGnUAOG20pIRDS3U'
+    })
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  declarations: [ AppComponent ],
+  bootstrap: [ AppComponent ]
 })
-export class AppModule { }
+export class AppModule {}
